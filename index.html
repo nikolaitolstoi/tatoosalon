@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Black Beard</title>
+	<link rel="stylesheet" href="main.css">
+	<link href="https://fonts.googleapis.com/css2?family=Kelly+Slab&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div id="black"></div>
+		
+	
+
+	<nav class="nav">
+			<ul>
+				<li id="load" class="load"><a href="#home">Главная</a></li>
+				<li id="load" class="load"><a href="#about">О нас</a></li>
+				<li id="load" class="load"><a href="#prem">Преимущества</a></li>
+				<div class="logo loada"><img src="logo inverted.png" alt=""></div>
+				<li id="load" class="load"><a href="#">Мастера</a></li>
+				<li id="load" class="load"><a href="#">Отзывы</a></li>
+				<li id="load" class="load"><a href="#" class="active">Запишись онлайн</a></li>
+			</ul>
+	</nav>
+	
+
+	<section class="main" id="main">
+		<div class="content">
+			<h1>Тату студия <br><span>«Black Beard»</span></h1>
+			<h2> Мы по-настоящему заботимся о своих клиентах </h2>
+			<a href="#">Записаться онлайн</a>
+		</div>		
+	</section>
+	
+	<section class="about" id="about">
+		<div class="content">
+			<h2>Тату студия<span>«Black Beard»</span></h2>
+			<p>Тату студия оснащена всем современным и необходимым рабочим инструментом, а также всеми надлежащими документами на виды деятельности в том числе и санитарными авторизациями. Мы используем только качественные оригинальные американские пигменты, и расходные материалы.
+			 Творческая атмосфера, лучший сервис, повышенное внимание к клиенту, горячий ароматный кофе и бесплатный WI-FI - вот некоторые из преимуществ, из-за которых как минимум стоит побывать у нас в гостях или получить бесплатную консультацию. Да, консультации у нас бесплатны, а еще эскизы входят в стоимость тату.
+			 Наши администраторы компетентно и с удовольствием ответят на все интересующие вас вопросы, а также дадут грамотные рекомендации по уходу, стилям и направлениям.
+			 Мастера студии "Black Beard" - это свободные художники во всех отношениях. Чистое творчество - вот что для нас важно! Многолетний опыт работы мастеров студии, позволяет работать в разных направлениях и стилях тату, тем не менее у каждого мастера свой подход и предпочтения. 
+			 Основная задача студии состоит в том, чтобы потенциальный клиент осознанно пришёл к выбору татуировки и её необходимости, и спустя года не пожалел о содеянном.
+			 </p>
+			<h3>Следи за нами в соц.сетях:</h3>
+			<div class="web">
+				<a href="#"><img src="vk.png" alt=""></a>
+				<a href="#"><img src="insta.png" alt=""></a>
+				<a href="#"><img src="facebook.png" alt=""></a>
+			</div>
+		</div>
+		<div class="gap"></div>
+	</section>
+
+	<section class="prem" id="prem">
+		<div class="cards">
+			<div class="card">
+				<div class="ico"><img src="adv2.png" alt=""></div>
+				<div class="cont">
+					<p>Для мастеров нашей студии работа это не просто заработок, это труд выполненный с душой.</p>
+				</div>
+			</div>
+			<div class="card">
+				<div class="ico"><img src="adv1.png" alt=""></div>
+				<div class="cont">
+					<p>Наши мастера всегда рады воплотить в жизнь интересные идеи. Вы будете уверены, что такой тату нет ни у кого.</p>
+				</div>
+			</div>
+			<div class="card">
+				<div class="ico"><img src="adv3.png" alt=""></div>
+				<div class="cont">
+					<p>В нашем тату салоне мастера в процессе работы используют только стерильные инструменты..</p>
+				</div>
+			</div>
+			<div class="card">
+				<div class="ico"><img src="adv4.png" alt=""></div>
+				<div class="cont">
+					<p>Творческая атмосфера, лучший сервис, повышенное внимание к клиенту, горячий ароматный кофе и бесплатный WI-FI</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script> 
+	<script>
+	        $(document).ready(function () {
+	            $(window).on('scroll',  function () {
+	                if ($(window).scrollTop()) {
+	                    $('.nav').addClass('nav-scroll');
+	                }
+	                else {
+	                    $('.nav').removeClass('nav-scroll');
+	                }
+	            })    
+	        })
+
+	    window.onload = trans();
+
+		function trans() {
+		  let timeout;
+		  timeout = setTimeout(black, 800);
+		}
+
+		function black() {
+			document.getElementById('black').style.opacity = '0';
+			let timeout;
+		    timeout = setTimeout(none, 800);
+		}
+
+		function none() {
+			document.getElementById('black').style.display = 'none';
+		    let timeout;
+		    timeout = setTimeout(load, 800);
+		}
+
+		function load() { 
+                $(".load").removeClass("load"); 
+                $(".loada").removeClass("loada");
+            };
+
+
+			let section = document.getElementById('main');
+			sort(1);
+
+			function sort (i) {
+
+		    	if ( i == 1 ) {section.style.backgroundImage = "url('1.jpg')"};
+
+				if ( i == 2 ) {section.style.backgroundImage = "url('2.jpg')"};
+
+				if ( i == 3 ) {section.style.backgroundImage = "url('3.jpg')"};
+
+				if ( i == 4 ) {section.style.backgroundImage = "url('4.jpg')"; i = 0};
+
+			    setTimeout(function(){
+			        sort(i+1);
+			    }, 4000);
+			}
+
+
+
+
+			
+			
+				
+				
+
+
+	</script>
+
+</body>
+</html>

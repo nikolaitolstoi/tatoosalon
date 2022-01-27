@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Black Beard</title>
+	<link rel="stylesheet" href="loadpage.css">
+	<link rel="stylesheet" href="fontawesome/css/all.css">
+	<link rel="shortcut icon" href="logo inverted.png" type="image/png">
+	<link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Bungee+Inline&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div id="black"></div>
+	<div class="opacity" id="home">
+		<img src="loading.png" alt="" class="loading">
+	</div>
+
+	<nav>
+		<h1>Tattoo Studio</h1>
+		<div class="logo"><img src="logo inverted.png" alt=""></div>
+		<h1>«Black Beard»</h1>
+	</nav>
+
+	<video src="videobg.mp4"   loop="" autoplay="" muted=""></video>
+
+	
+
+
+
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+
+    window.onload = trans();
+
+	function trans() {
+	  let timeout;
+	  timeout = setTimeout(black, 800);
+	}
+
+	function black() {
+		document.getElementById('black').style.opacity = '0';
+		let timeout;
+	    timeout = setTimeout(none, 5500);
+	}
+
+	function none() {
+		document.getElementById('black').style.display = 'none';
+		dark();
+	}
+
+	function dark() {
+	document.getElementById('black').style.display = 'block';
+	  document.getElementById('black').style.opacity = '1';
+	  let tout; 
+	  tout = setTimeout(redirect, 1000);
+	}
+
+	function redirect() {
+    	document.location.href='index.html';
+	};	
+
+
+
+
+	
+</script>
+
+</html>
